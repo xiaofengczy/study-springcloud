@@ -2,7 +2,8 @@ package com.study.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 /**
  * FileName: SpringcloudServerApplication Description:
@@ -11,10 +12,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @create 19-8-3
  */
 @SpringBootApplication
-@EnableEurekaClient
-public class SpringcloudServerApplication {
+@EnableDiscoveryClient
+@RefreshScope
+public class UserServerApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(SpringcloudServerApplication.class);
+    SpringApplication.run(UserServerApplication.class);
   }
 }

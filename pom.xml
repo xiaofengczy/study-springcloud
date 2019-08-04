@@ -17,6 +17,7 @@
   <properties>
     <jdk.version>1.8</jdk.version>
     <spring.cloud.version>Greenwich.SR1</spring.cloud.version>
+    <!--<spring.cloud.version>Finchley.RELEASE</spring.cloud.version>-->
   </properties>
   <parent>
     <groupId>org.springframework.boot</groupId>
@@ -28,10 +29,15 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+    <!--引入springcloud-consul依赖-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-consul-all</artifactId>
     </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+    <!--</dependency>-->
   </dependencies>
 
   <dependencyManagement>
