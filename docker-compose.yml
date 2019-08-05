@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  order-service:
+    image: order-server:latest
+#    links:
+#      - user-service
+    ports:
+      - "9001:9001"
+    volumes:
+      - /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-user
+  user-service:
+    image: user-server:latest
+    ports:
+      - "9000:9000"
+    volumes:
+      - /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-order
+
