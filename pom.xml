@@ -11,7 +11,6 @@
   <modules>
     <module>study-springcloud-server</module>
     <module>study-springcloud-eureka</module>
-    <module>study-springcloud-server-order</module>
   </modules>
 
   <properties>
