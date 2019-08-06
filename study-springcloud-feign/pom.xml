@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>study-springcloud-server</artifactId>
+  <artifactId>study-springcloud-feign</artifactId>
   <packaging>pom</packaging>
   <modules>
     <module>study-springcloud-server-user</module>
