@@ -3,19 +3,19 @@ services:
   order-service:
     image: order-server:latest
     build:
-      context: /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server-feign/study-springcloud-server-order
+      context: /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-feign/study-springcloud-server-order
       dockerfile: Dockerfile
     ports:
       - "9001:9001"
     volumes:
-      - /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-user
+      - /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-feign/study-springcloud-server-order
   user-service:
     image: user-server:latest
     build:
-      context: /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server-feign/study-springcloud-server-user
+      context: /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-feign/study-springcloud-server-user
       dockerfile: Dockerfile
     ports:
       - "9000:9000"
     volumes:
-      - /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-order
+      - /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-feign/study-springcloud-server-user
 
