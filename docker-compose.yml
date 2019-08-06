@@ -2,12 +2,18 @@ version: '3.7'
 services:
   order-service:
     image: order-server:latest
+    build:
+      context: /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server-feign/study-springcloud-server-order
+      dockerfile: Dockerfile
     ports:
       - "9001:9001"
     volumes:
       - /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-user
   user-service:
     image: user-server:latest
+    build:
+      context: /home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server-feign/study-springcloud-server-user
+      dockerfile: Dockerfile
     ports:
       - "9000:9000"
     volumes:
