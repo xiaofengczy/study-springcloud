@@ -1,0 +1,21 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: ribbon-server
+
+# 配置client-a服务负载均衡策略为随机
+client-a:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+  ConnectTimeout: 3000
+  ReadTimeout: 30000
+  MaxAutoRetries: 1 # 第一次请求的服务重试次数
+  MaxAutoRetriesNextServer: 1 # 要重试的下一个服务最大数量
+  OkToRetryOnAllOperations: true
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: client-a,client-b

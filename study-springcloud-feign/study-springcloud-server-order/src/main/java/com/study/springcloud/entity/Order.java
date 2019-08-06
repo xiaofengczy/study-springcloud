@@ -1,5 +1,6 @@
 package com.study.springcloud.entity;
 
+import com.study.springcloud.user.entity.User;
 import lombok.Data;
 
 /**

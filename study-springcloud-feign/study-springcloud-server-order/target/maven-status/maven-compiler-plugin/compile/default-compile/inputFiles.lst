@@ -1,3 +1,3 @@
-/home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-order/src/main/java/com/study/springcloud/controller/OrderController.java
-/home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-order/src/main/java/com/study/springcloud/entity/Order.java
-/home/zycao/work/study-workspaces/study-springcloud/study-springcloud-server/study-springcloud-server-order/src/main/java/com/study/springcloud/OrderServerApplication.java
+/home/zycao/work/study-workspaces/study-springcloud/study-springcloud-feign/study-springcloud-server-order/src/main/java/com/study/springcloud/entity/Order.java
+/home/zycao/work/study-workspaces/study-springcloud/study-springcloud-feign/study-springcloud-server-order/src/main/java/com/study/springcloud/controller/OrderController.java
+/home/zycao/work/study-workspaces/study-springcloud/study-springcloud-feign/study-springcloud-server-order/src/main/java/com/study/springcloud/OrderServerApplication.java

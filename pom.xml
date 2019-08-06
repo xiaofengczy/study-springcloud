@@ -11,6 +11,7 @@
   <modules>
     <module>study-springcloud-feign</module>
     <module>study-springcloud-eureka</module>
+    <module>study-springcloud-ribbon</module>
   </modules>
 
   <properties>

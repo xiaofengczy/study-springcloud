@@ -1,7 +1,8 @@
 package com.study.springcloud.controller;
 
-import com.study.springcloud.api.UserApi;
-import com.study.springcloud.entity.User;
+import com.study.springcloud.user.api.UserApi;
+import com.study.springcloud.user.entity.Params;
+import com.study.springcloud.user.entity.User;
 import java.util.Objects;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,4 +31,11 @@ public class UserController implements UserApi {
     user.setAddress("重庆市渝北区");
     return user;
   }
+
+  @Override
+  public String demoEndPoint(Params params) {
+    return params.toString();
+  }
+
+
 }

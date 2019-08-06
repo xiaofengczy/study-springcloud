@@ -1,12 +1,15 @@
 package com.study.springcloud.controller;
 
-import com.study.springcloud.api.UserApi;
 import com.study.springcloud.entity.Order;
-import com.study.springcloud.entity.User;
+import com.study.springcloud.user.api.UserApi;
+import com.study.springcloud.user.entity.Params;
+import com.study.springcloud.user.entity.User;
 import java.util.Objects;
 import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -39,5 +42,11 @@ public class OrderController {
     User user = userApi.findUserById(order.getUserId());
     order.setUser(user);
     return order;
+  }
+
+  @PostMapping("/demo")
+  String findDemo(@RequestBody Params params) {
+    String s = userApi.demoEndPoint(params);
+    return s;
   }
 }
