@@ -1,7 +1,9 @@
 package com.study.springcloud.controller;
 
 import com.study.springcloud.entity.Order;
+import com.study.springcloud.user.api.BookApi;
 import com.study.springcloud.user.api.UserApi;
+import com.study.springcloud.user.entity.Book;
 import com.study.springcloud.user.entity.Params;
 import com.study.springcloud.user.entity.User;
 import java.util.Objects;
@@ -26,6 +28,9 @@ public class OrderController {
   @Resource
   private UserApi userApi;
 
+  @Resource
+  private BookApi bookApi;
+
   @GetMapping("/find/{orderNo}")
   Order findOrderByNo(@PathVariable("orderNo") String orderNo) {
     Order order = new Order();
@@ -48,5 +53,10 @@ public class OrderController {
   String findDemo(@RequestBody Params params) {
     String s = userApi.demoEndPoint(params);
     return s;
+  }
+
+  @GetMapping("/book/{id}")
+  Book findBook(@PathVariable("id") String id) {
+    return bookApi.getBook(id);
   }
 }
